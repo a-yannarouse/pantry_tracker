@@ -5,15 +5,14 @@ import { getStorage } from "firebase/storage"; // Import Firebase Storage
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAAf00bYoVB1Qi_1wBCqDPsSZForgddOLE",
-  authDomain: "my-pantry-tracker-2024.firebaseapp.com",
-  projectId: "my-pantry-tracker-2024",
-  storageBucket: "my-pantry-tracker-2024.appspot.com",
-  messagingSenderId: "180116935201",
-  appId: "1:180116935201:web:7ff9a1ba464f4efa558960",
-  measurementId: "G-3EEWXT2KEV"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
